@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/signup.css">
+        <link rel="stylesheet" href="common.css">
+        <title>Signup</title>
+    </head>
+
+    <body>
+        <div id="navbar">
+      
+        </div>
+        <div id="signup-form-div">
+            <h1>Signup Form</h1>
+            <form id="form">
+                <!--Write form input elements here-->
+                <input type="text" id="name"   placeholder="Enter Your Name" required>
+                <input type="number" id="mob"  placeholder="Enter Your Contact Number" required>
+                <input type="email" id="email"  placeholder="Enter Your Email Id" id="email" required>
+                <input type="text" id="pw"  placeholder="Enter Your Password" required>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+
+        </div>
+    </body>
+
+</html>
+<script type="module">
+     import navbar from "./scripts/fetch.js"
+
+document.getElementById("navbar").innerHTML=navbar();
+
+</script>
+<script src="/scripts/signup.js"></script>

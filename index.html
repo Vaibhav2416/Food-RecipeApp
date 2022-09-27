@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    
+    <div id="navbar">
+
+    </div>
+    <div id="container"></div>
+</body>
+</html>
+<script type="module">
+    let id;
+    import navbar from "./scripts/fetch.js"
+
+    document.getElementById("navbar").innerHTML=navbar();
+  
+
+ let url;
+ let container=document.getElementById("container")
+import appenData from "./scripts/data.js"
+
+let  getData=async ()=>{
+   let q= document.querySelector("#inp").value;
+  
+   container.innerHTML=null
+    console.log(q)
+    try {
+       url=`https://www.themealdb.com/api/json/v1/1/search.php?s=${q}`
+
+        let resp=await fetch(url)
+        let data=await resp.json();
+        console.log(data.meals)
+        appenData(data.meals,container)
+        // appenData(data.meals)
+        
+        // mute(data.meals,container)
+        //   return data.meals
+    } catch (error) {
+        
+    }
+   
+}
+
+document.querySelector("#inp").oninput=function(){debounce()}
+
+
+
+
+function debounce(func){
+  
+  if(id){
+      clearTimeout(id)
+  }
+  id=setTimeout(function(){
+      getData();
+  },1000);
+}
+
+
+
+ 
+</script>
+

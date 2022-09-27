@@ -1,0 +1,66 @@
+#signup-form-div{
+    margin: auto;
+    margin-top: 5%;
+    height: 300px;
+    border: 4px solid skyblue  ;
+    display: flex;
+    
+    line-height: 3;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+
+}
+#signup-form-div>h1{
+    margin-bottom: -4%;
+    margin-top: -4%;
+}
+
+form > input{
+    width: 100%;
+    height: 40px;
+    border: 3px solid bisque;
+    box-sizing: border-box;
+    
+}
+form > button{
+    width: 60%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   font-size: 20px;
+   margin-top: 10px;
+   border:1px solid black;
+   cursor: pointer;
+   font-weight: bold;
+   height: 30px;
+}
+form > button:hover{
+    background-color: azure;
+    color: brown;
+}
+#navbar{
+    display: flex;
+    justify-content: end;
+    padding-right: 80px;
+    gap: 20px;
+    border: 2px solid wheat;
+}
+#navbar>p{
+    border: 2px solid rgb(186, 35, 35);
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#navbar>p a{
+    text-decoration: none;
+}
